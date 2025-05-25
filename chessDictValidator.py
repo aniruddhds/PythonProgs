@@ -13,9 +13,7 @@ def validate_board(boardDict):
             white_pieces += 1
     if black_pieces >= 17 or white_pieces >= 17:
         return False
-
     # check for at most 8 pawns per player
-    
     bpawn_count = 0
     wpawn_count = 0
 
@@ -27,8 +25,7 @@ def validate_board(boardDict):
 
     if bpawn_count >= 9 or wpawn_count >= 9:
         return False
-
-
+        
     # check for a valid location
     board_keys = []
     for k in boardDict.keys():
@@ -56,7 +53,6 @@ def validate_board(boardDict):
             return False
     return True
 
-
-# testing boards
 testBoard={"1h": "bking", "6": "wqueen", "1h": "bbishop", "6h": "bqueen", "3e": "wking"}
+print(f"Board for testing: {testBoard}")
 print(validate_board(testBoard))
