@@ -1,8 +1,7 @@
 import random
-
 def generate_flips(num_flips):
     flips = []
-    for _ in range(num_flips):
+    for i in range(num_flips):
         flip_result = random.randint(0, 1)
         if flip_result == 0:
             flips.append('H')
@@ -10,9 +9,8 @@ def generate_flips(num_flips):
             flips.append('T')
     return flips
 
-
 def has_streak(flips, streak_length=6):
-    """Check if the list contains a streak of streak_length heads or tails."""
+    #Check if the list contains a streak of streak_length heads or tails."""
     count = 1
     for i in range(1, len(flips)):
         if flips[i] == flips[i-1]:
@@ -33,8 +31,7 @@ def run_experiments(num_experiments, num_flips, streak_length=6):
     print(f"Out of {num_experiments} experiments, {streak_count} contained a streak of {streak_length}.")
     print(f"Percentage: {percentage:.2f}%")
 
-NUM_EXPERIMENTS = 10000
-NUM_FLIPS = 100  # Number of flips per experiment
-STREAK_LENGTH = 6
-
-run_experiments(NUM_EXPERIMENTS, NUM_FLIPS, STREAK_LENGTH)
+numExperiments = 10000
+numFlips = 100  # Number of flips per experiment
+streakLength = 6
+run_experiments(numExperiments, numFlips, streakLength)
