@@ -20,7 +20,6 @@ def printTable(tableData):
             print(tableData[col][row].rjust(colWidths[col]), end=' ')
         print("\n") 
 
-
 tableData = [['apples', 'oranges', 'cherries', 'banana'],
              ['Alice', 'Bob', 'Carol', 'David'],
              ['dogs', 'cats', 'moose', 'goose']]
