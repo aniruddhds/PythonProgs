@@ -1,14 +1,14 @@
 import time
-import os
-
-def clear_console():
-    # Clear the console screen (cross-platform)
-    os.system('cls' if os.name == 'nt' else 'clear')
 
 def create_board(rows, cols):
-    # Create an empty board (2D list) initialized with 0 (dead cells)
-    return [[0 for _ in range(cols)] for _ in range(rows)]
-
+    board = []
+    for i in range(rows):
+        row = []
+        for i in range(cols):
+            row.append(0)
+        board.append(row)
+    return board
+    
 def print_board(board):
     for row in board:
         line = '--'
@@ -48,7 +48,6 @@ def next_generation(board):
                     new_board[r][c] = 1
     return new_board
 
-#def main():
 rows, cols = 20, 40  # Board size
 board = create_board(rows, cols)
 # Initial pattern (Glider)
@@ -57,7 +56,6 @@ for r, c in glider:
     board[r][c] = 1
 try:
     while True:
-        clear_console()
         print_board(board)
         board = next_generation(board)
         time.sleep(0.3)
