@@ -16,7 +16,7 @@ def starzig(seq):
 
 size=input("enter your required size: ")
 size=int(size)
-seq=input("Enter what you want to be printed")
+seq=input("Enter what you want to be printed: ")
 user=input("Enter your choice: s for start and t for stop: ")
 for i in range(size):
     if user=='s':
