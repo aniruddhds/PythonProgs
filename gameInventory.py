@@ -1,11 +1,5 @@
-"""
-items will include the following:
-    arrow
-    gold coin
-    rope
-    torch
-    dagger
-"""
+"""items will include the following:
+arrow gold coin rope torch dagger """
 def displayInventory(inventory):
     item_total = 0
     for item, quan in inventory.items():
@@ -19,11 +13,6 @@ def inventoryUpdater(origInv,lootInv):
         for lootItem,lootQuan in lootInv.items():
             if origItem == lootItem:
                 origInv[origItem] = origQuan + lootQuan
-
-# print("The available items are: ")
-# print("Arrow","Gold Coin","Rope","Torch","Dagger",sep='\t')
-
-# items=['rope','torch','dagger','gold coin','arrow']
 
 yourStuff={'rope':1, 'torch':4, 'dagger':3,'gold coin':500}
 print("Your inventory: ")
