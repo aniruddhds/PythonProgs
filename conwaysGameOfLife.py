@@ -48,7 +48,7 @@ def next_generation(board):
                     new_board[r][c] = 1
     return new_board
 
-rows, cols = 20, 40  # Board size
+rows, cols = 10, 20  # Board size
 board = create_board(rows, cols)
 # Initial pattern (Glider)
 glider = [(1,2), (2,3), (3,1), (3,2), (3,3)]
