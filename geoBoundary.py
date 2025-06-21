@@ -67,7 +67,6 @@ def rect_circle_overlap(circle: Circle, rect: Rectangle, partial_overlap=False):
     # If distance from circle center to closest point <= radius, they overlap
     if distance(c, closest_point) <= circle.radius:
         return True
-    
     return False
 
 # Instantiate Circle with center at (150, 100) and radius 75
@@ -88,7 +87,7 @@ print("\nRect2 Position: ")
 print(rect2)
 print(f"rect2 corner in circle? [{rect_circle_overlap(circle, rect2)}]")
 print(f"rect2 partial overlap? [{rect_circle_overlap(circle, rect2, partial_overlap=True)}]")
-    
+
     # Define a rectangle completely outside
 rect3 = Rectangle(Point(230, 200), 10, 10)
 print("\nRect3 Position: ")
