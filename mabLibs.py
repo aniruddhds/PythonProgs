@@ -11,6 +11,7 @@ def libs1():
     print("Your sentence is :--")
     print("+++++++++++++++++++++++++++++++++++++")
     print(sentence)
+    return sentence
 
 def libs2():
     noun1=input("A noun (person): ")
@@ -23,17 +24,26 @@ def libs2():
     print("Your sentence is :--")
     print("+++++++++++++++++++++++++++++++++++++")
     print(sentence)
+    return sentence
 
 def endcard():
     print("=====================================")
     print("Thank you for playing.")
     print("Visit again for more funny sentences.")
-
+    
+def fileWriter(sen):
+    file=open('MadLibs.txt','a')
+    file.write(f"Your madlibs sentence: {sen} \n")
+    file.close()
+    print("Sentence written to file.")
+    
 print(f"=========Welcome to MAD LIBS!!==========")
 print("Now for your first sentence:-- ")
-libs1()
+sen1=libs1()
+fileWriter(sen1)
 dec=input("Do you want to try one more? (y/n) : ")
 if dec.lower()=='y':
-    libs2()
+    sen2=libs2()
+    fileWriter(sen2)
 
 endcard()
